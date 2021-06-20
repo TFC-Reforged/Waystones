@@ -3,10 +3,10 @@ package net.blay09.mods.waystones;
 import net.blay09.mods.waystones.block.BlockWaystone;
 import net.blay09.mods.waystones.block.TileWaystone;
 import net.blay09.mods.waystones.compat.Compat;
-import net.blay09.mods.waystones.item.ItemBoundScroll;
-import net.blay09.mods.waystones.item.ItemReturnScroll;
-import net.blay09.mods.waystones.item.ItemWarpScroll;
-import net.blay09.mods.waystones.item.ItemWarpStone;
+//import net.blay09.mods.waystones.item.ItemBoundScroll;
+//import net.blay09.mods.waystones.item.ItemReturnScroll;
+//import net.blay09.mods.waystones.item.ItemWarpScroll;
+//import net.blay09.mods.waystones.item.ItemWarpStone;
 import net.blay09.mods.waystones.network.NetworkHandler;
 import net.blay09.mods.waystones.worldgen.ComponentVillageWaystone;
 import net.blay09.mods.waystones.worldgen.LegacyWorldGen;
@@ -53,7 +53,7 @@ public class Waystones {
     @GameRegistry.ObjectHolder(BlockWaystone.name)
     public static final Block blockWaystone = Blocks.AIR;
 
-    @GameRegistry.ObjectHolder(ItemReturnScroll.name)
+    /*@GameRegistry.ObjectHolder(ItemReturnScroll.name)
     public static final Item itemReturnScroll = Items.AIR;
 
     @GameRegistry.ObjectHolder(ItemBoundScroll.name)
@@ -63,7 +63,7 @@ public class Waystones {
     public static final Item itemWarpScroll = Items.AIR;
 
     @GameRegistry.ObjectHolder(ItemWarpStone.name)
-    public static final Item itemWarpStone = Items.AIR;
+    public static final Item itemWarpStone = Items.AIR;*/
 
     public static final CreativeTabs creativeTab = new CreativeTabs(Waystones.MOD_ID) {
         @Override
@@ -108,20 +108,20 @@ public class Waystones {
         );
 
         event.getRegistry().registerAll(
-                new ItemReturnScroll().setRegistryName(ItemReturnScroll.registryName),
-                new ItemBoundScroll().setRegistryName(ItemBoundScroll.registryName),
-                new ItemWarpScroll(),
-                new ItemWarpStone()
+                //new ItemReturnScroll().setRegistryName(ItemReturnScroll.registryName),
+                //new ItemBoundScroll().setRegistryName(ItemBoundScroll.registryName),
+                //new ItemWarpScroll(),
+                //new ItemWarpStone()
         );
     }
 
     @SubscribeEvent
     public static void registerModels(ModelRegistryEvent event) {
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(Waystones.blockWaystone), 0, new ModelResourceLocation(BlockWaystone.registryName, "inventory"));
-        ModelLoader.setCustomModelResourceLocation(Waystones.itemWarpStone, 0, new ModelResourceLocation(ItemWarpStone.registryName, "inventory"));
-        ModelLoader.setCustomModelResourceLocation(Waystones.itemReturnScroll, 0, new ModelResourceLocation(ItemReturnScroll.registryName, "inventory"));
-        ModelLoader.setCustomModelResourceLocation(Waystones.itemWarpScroll, 0, new ModelResourceLocation(ItemWarpScroll.registryName, "inventory"));
-        ModelLoader.setCustomModelResourceLocation(Waystones.itemBoundScroll, 0, new ModelResourceLocation(ItemBoundScroll.registryName, "inventory"));
+        //ModelLoader.setCustomModelResourceLocation(Waystones.itemWarpStone, 0, new ModelResourceLocation(ItemWarpStone.registryName, "inventory"));
+        //ModelLoader.setCustomModelResourceLocation(Waystones.itemReturnScroll, 0, new ModelResourceLocation(ItemReturnScroll.registryName, "inventory"));
+        //ModelLoader.setCustomModelResourceLocation(Waystones.itemWarpScroll, 0, new ModelResourceLocation(ItemWarpScroll.registryName, "inventory"));
+        //ModelLoader.setCustomModelResourceLocation(Waystones.itemBoundScroll, 0, new ModelResourceLocation(ItemBoundScroll.registryName, "inventory"));
 
         ForgeHooksClient.registerTESRItemStack(Item.getItemFromBlock(Waystones.blockWaystone), 0, TileWaystone.class);
     }

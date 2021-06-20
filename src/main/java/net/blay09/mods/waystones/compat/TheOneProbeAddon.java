@@ -1,5 +1,5 @@
 package net.blay09.mods.waystones.compat;
-
+/*
 import com.google.common.base.Function;
 import mcjty.theoneprobe.api.IProbeHitData;
 import mcjty.theoneprobe.api.IProbeInfo;
@@ -59,4 +59,4 @@ public class TheOneProbeAddon implements Function<ITheOneProbe, Void> {
 		return null;
 	}
 
-}
+}*/

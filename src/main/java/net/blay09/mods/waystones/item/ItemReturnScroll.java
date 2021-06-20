@@ -1,5 +1,5 @@
 package net.blay09.mods.waystones.item;
-
+/*
 import net.blay09.mods.waystones.PlayerWaystoneHelper;
 import net.blay09.mods.waystones.WaystoneConfig;
 import net.blay09.mods.waystones.WaystoneManager;
@@ -44,4 +44,4 @@ public class ItemReturnScroll extends ItemBoundScroll {
     public EnumActionResult onItemUseFirst(EntityPlayer player, World world, BlockPos pos, EnumFacing side, float hitX, float hitY, float hitZ, EnumHand hand) {
         return EnumActionResult.PASS;
     }
-}
+}*/

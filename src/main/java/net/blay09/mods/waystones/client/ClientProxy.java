@@ -115,9 +115,9 @@ public class ClientProxy extends CommonProxy {
 
     @SubscribeEvent
     public void onFOV(FOVUpdateEvent event) {
-        if (!event.getEntity().getActiveItemStack().isEmpty() && event.getEntity().getActiveItemStack().getItem() == Waystones.itemReturnScroll) {
+       /* if (!event.getEntity().getActiveItemStack().isEmpty() && event.getEntity().getActiveItemStack().getItem() == Waystones.itemReturnScroll) {
             event.setNewfov(event.getEntity().getItemInUseCount() / 64f * 2f + 0.5f);
-        }
+        }*/
     }
 
     @Override

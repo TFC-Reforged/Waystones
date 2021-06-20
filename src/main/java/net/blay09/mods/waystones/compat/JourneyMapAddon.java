@@ -1,5 +1,5 @@
 package net.blay09.mods.waystones.compat;
-
+/*
 import journeymap.client.api.ClientPlugin;
 import journeymap.client.api.IClientAPI;
 import journeymap.client.api.IClientPlugin;
@@ -50,3 +50,4 @@ public class JourneyMapAddon implements IClientPlugin {
     }
 
 }
+*/

@@ -2,7 +2,7 @@ package net.blay09.mods.waystones.network.handler;
 
 import net.blay09.mods.waystones.PlayerWaystoneHelper;
 import net.blay09.mods.waystones.client.ClientWaystones;
-import net.blay09.mods.waystones.item.ItemWarpStone;
+//import net.blay09.mods.waystones.item.ItemWarpStone;
 import net.blay09.mods.waystones.network.NetworkHandler;
 import net.blay09.mods.waystones.network.message.MessageWaystones;
 import net.minecraftforge.fml.client.FMLClientHandler;
@@ -22,7 +22,7 @@ public class HandlerWaystones implements IMessageHandler<MessageWaystones, IMess
 			public void run() {
 				ClientWaystones.setKnownWaystones(message.getEntries());
 				PlayerWaystoneHelper.store(FMLClientHandler.instance().getClientPlayerEntity(), message.getEntries(), message.getLastFreeWarp(), message.getLastWarpStoneUse());
-				ItemWarpStone.lastTimerUpdate = System.currentTimeMillis();
+				//ItemWarpStone.lastTimerUpdate = System.currentTimeMillis();
 			}
 		});
 		return null;

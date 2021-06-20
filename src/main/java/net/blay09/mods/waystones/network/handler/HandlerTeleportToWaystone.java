@@ -10,6 +10,8 @@ import net.blay09.mods.waystones.network.message.MessageTeleportToWaystone;
 import net.blay09.mods.waystones.util.WaystoneEntry;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
+import net.minecraft.potion.Potion;
+import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.math.MathHelper;
 import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
 import net.minecraftforge.fml.common.network.simpleimpl.IMessageHandler;
@@ -43,10 +45,10 @@ public class HandlerTeleportToWaystone implements IMessageHandler<MessageTelepor
                     }
 
                     break;
-                case WARP_SCROLL:
+                /*case WARP_SCROLL:
                     enableXPCost = false;
 
-                    if (heldItem.isEmpty() || heldItem.getItem() != Waystones.itemWarpScroll) {
+                    /*if (heldItem.isEmpty() || heldItem.getItem() != Waystones.itemWarpScroll) {
                         return;
                     }
 
@@ -65,7 +67,7 @@ public class HandlerTeleportToWaystone implements IMessageHandler<MessageTelepor
                         return;
                     }
 
-                    break;
+                    break;*/
                 case WAYSTONE:
                     enableXPCost = enableXPCost && WaystoneConfig.general.waystoneXpCost && !player.capabilities.isCreativeMode;
                     if (enableXPCost && player.experienceLevel < xpLevelCost) {
@@ -83,6 +85,8 @@ public class HandlerTeleportToWaystone implements IMessageHandler<MessageTelepor
             if (WaystoneManager.teleportToWaystone(ctx.getServerHandler().player, message.getWaystone())) {
                 if (enableXPCost) {
                     player.addExperienceLevel(-xpLevelCost);
+                    player.addPotionEffect(new PotionEffect(Potion.getPotionById(9), 130, 5));
+                    player.addPotionEffect(new PotionEffect(Potion.getPotionById(15), 50, 10));
                 }
 
                 boolean shouldCooldown = !(message.getWaystone().isGlobal() && WaystoneConfig.general.globalNoCooldown);

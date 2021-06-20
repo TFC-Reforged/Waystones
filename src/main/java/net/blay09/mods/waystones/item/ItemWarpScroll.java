@@ -1,5 +1,5 @@
 package net.blay09.mods.waystones.item;
-
+/*
 import net.blay09.mods.waystones.WarpMode;
 import net.blay09.mods.waystones.WaystoneConfig;
 import net.blay09.mods.waystones.WaystoneManager;
@@ -104,3 +104,4 @@ public class ItemWarpScroll extends Item implements IResetUseOnDamage {
 
 
 }
+*/

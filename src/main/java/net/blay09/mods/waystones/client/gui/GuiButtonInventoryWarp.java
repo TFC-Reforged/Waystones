@@ -20,7 +20,7 @@ public class GuiButtonInventoryWarp extends GuiButton {
 	public GuiButtonInventoryWarp(GuiContainer parentScreen) {
 		super(-1, 0, 0, 16, 16, "");
 		this.parentScreen = parentScreen;
-		this.iconItem = new ItemStack(Waystones.itemReturnScroll);
+		this.iconItem = new ItemStack(Waystones.blockWaystone);
 	}
 
 	@Override

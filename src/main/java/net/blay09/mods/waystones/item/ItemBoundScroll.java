@@ -1,5 +1,5 @@
 package net.blay09.mods.waystones.item;
-
+/*
 import net.blay09.mods.waystones.WaystoneConfig;
 import net.blay09.mods.waystones.WaystoneManager;
 import net.blay09.mods.waystones.Waystones;
@@ -173,3 +173,4 @@ public class ItemBoundScroll extends Item implements IResetUseOnDamage {
     }
 
 }
+*/
